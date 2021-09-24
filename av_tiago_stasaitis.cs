@@ -27,51 +27,31 @@ public class Televisor{
     public int getVolume() {
         return volume;
     }
-    public string setCanal(int numeroCanal) {
-        if (canal > 256 || canal < 1){
-            return "Canal Inválido";
-        } 
-        else {
+    public void setCanal(int numeroCanal) {
+        if (numeroCanal < 257 || numeroCanal > 0){
             canal = numeroCanal;
-            return "Canal  alterado com sucesso!";
-        }
-    }
-    public string aumentaCanal() {
-        if (canal == 256){
-            return "Canal Inválido";
         } 
-        else {
+    }
+    public void aumentaCanal() {
+        if (canal < 256){
             canal = canal + 1;
-            return "Canal  alterado com sucesso!";
-        }
-    }
-    public string diminuiCanal() {
-        if (canal == 1){
-            return "Canal Inválido";
         } 
-        else {
+    }
+    public void diminuiCanal() {
+        if (canal > 1){
             canal = canal - 1;
-            return "Canal  alterado com sucesso!";
         }
     }
-    public string aumentaVolume() {
-        if (volume == 100){
-            return "Volume no máximo!";
-        } 
-        else {
+    public void aumentaVolume() {
+        if (volume < 100){
             volume = volume + 1;
-            return "Volume alterado com sucesso!";
-        }
+        } 
     }
 
-    public string diminuiVolume() {
-        if (volume == 1){
-            return "Mudo";
-        } 
-        else {
+    public void diminuiVolume() {
+        if (volume > 0){
             volume = volume - 1;
-            return "Volume alterado com sucesso!";
-        }
+        } 
     }
 
     public static void Main(){
