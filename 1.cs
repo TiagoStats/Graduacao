@@ -5,7 +5,7 @@ public class Televisor{
     private int canal = 0;
     private int volume = 0;
 
-    public void ligarDesligarTelevisor(){
+    public void setLigado(){
         if (ligado == true){
             ligado = false;
         }
@@ -13,7 +13,7 @@ public class Televisor{
             ligado = true;
         }
     } 
-    public bool isTelevisorLigado(){
+    public bool isLigado(){
         if (ligado == true){
             return true;
         }
@@ -55,12 +55,6 @@ public class Televisor{
     }
 
     public static void Main(){
-
-    Televisor teste = new Televisor();
-	
-	teste.aumentaCanal();
-		
-    Console.WriteLine(teste.getCanal());
 
     }
 }
